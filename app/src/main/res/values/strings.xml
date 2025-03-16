@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Smd_Ass_2</string>
+    <string name="name">CV Maker</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="edit_profile_picture">Edit Profile Picture</string>
+</resources>
