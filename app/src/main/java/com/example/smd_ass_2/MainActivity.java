@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
                 openActivity(ExportPDFActivity.class);
             }
         });
+        Button btnPreview = findViewById(R.id.Preview);
+        btnPreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity(PreviewActivity.class);
+            }
+        });
+
 
     }
     private void openActivity(Class<?> activityClass) {
