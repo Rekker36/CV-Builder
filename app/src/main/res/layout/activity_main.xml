@@ -119,6 +119,15 @@
                 android:textSize="24sp"
                 android:layout_marginTop="10dp"
                 />
+            <Button
+                android:id="@+id/btnExportPDF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="Export CV as PDF"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"/>
 
         </LinearLayout>
 

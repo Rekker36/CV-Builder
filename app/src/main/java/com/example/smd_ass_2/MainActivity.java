@@ -76,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
                 openActivity(ReferencesActivity.class);
             }
         });
+        Button btnExportPDF = findViewById(R.id.btnExportPDF);
+        btnExportPDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity(ExportPDFActivity.class);
+            }
+        });
+
     }
     private void openActivity(Class<?> activityClass) {
         Intent intent = new Intent(MainActivity.this, activityClass);

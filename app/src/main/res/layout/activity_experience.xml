@@ -1,10 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExperienceActivity">
+    android:orientation="vertical"
+    tools:context=".ExperienceActivity"
+    android:background="@color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Header -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="84sp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Logo"
+                android:focusable="true"
+                android:src="@drawable/logo"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CV Builder"
+                android:textSize="36sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Experience Form -->
+    <EditText
+        android:id="@+id/etCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Company Name"/>
+
+    <EditText
+        android:id="@+id/etPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Job Position"/>
+
+    <EditText
+        android:id="@+id/etYears"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Years Worked"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Add Experience"/>
+
+    <!-- List of Experiences -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/experienceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>

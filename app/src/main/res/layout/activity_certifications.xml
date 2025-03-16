@@ -1,10 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CertificationsActivity">
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Header -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="84sp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Logo"
+                android:focusable="true"
+                android:src="@drawable/logo"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CV Builder"
+                android:textSize="36sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Certification Form -->
+    <EditText
+        android:id="@+id/etCertificationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Certification Name"/>
+
+    <EditText
+        android:id="@+id/etIssuingOrganization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Issuing Organization"/>
+
+    <EditText
+        android:id="@+id/etYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Year of Certification"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnAddCertification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Certification"/>
+
+    <!-- List of Certifications -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/certificationsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>

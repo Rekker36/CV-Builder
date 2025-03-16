@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SummaryActivity">
+    tools:context=".SummaryActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="84sp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Logo"
+                android:focusable="true"
+                android:src="@drawable/logo"
+                android:clickable="true"
+                android:layout_margin="0sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CV Builder"
+                android:textSize="36sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10sp"
+        android:paddingTop="25sp"
+        android:paddingBottom="26sp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36sp"
+            android:text="Summary:"
+            />
+        <EditText
+            android:id="@+id/etSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input Summary"
+            android:inputType="textMultiLine"
+            android:minHeight="150sp"
+            android:gravity="bottom"
+            />
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:text="Save"/>
+
+    </LinearLayout>
+</LinearLayout>
